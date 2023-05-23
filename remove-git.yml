@@ -1,0 +1,9 @@
+- hosts: first
+  remote_user: cheernomore
+
+  tasks:
+    - name: remove git
+      ansible.builtin.apt:
+        name: git
+        state: absent
+      become: yes
